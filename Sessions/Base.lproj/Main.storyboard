@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="buQ-3t-7Zg">
+                                <rect key="frame" x="77" y="95" width="482" height="441"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHo-bl-OkR">
+                                <rect key="frame" x="36" y="550" width="55" height="30"/>
+                                <state key="normal" title="Resume"/>
+                                <connections>
+                                    <action selector="resumeTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wXg-ii-RIo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7i-Pc-A2k">
+                                <rect key="frame" x="524" y="555" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nJk-LK-808"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Cmx-Gv-dzF">
+                                <rect key="frame" x="153" y="78" width="281" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="vaw-oO-q9F"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="buQ-3t-7Zg" secondAttribute="trailing" constant="21" id="82Y-so-YI8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="B7i-Pc-A2k" secondAttribute="bottom" constant="15" id="AlA-7g-DVo"/>
+                            <constraint firstItem="buQ-3t-7Zg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="Mrk-Dc-oxw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B7i-Pc-A2k" secondAttribute="trailing" constant="8" id="NSP-dI-X1x"/>
+                            <constraint firstItem="buQ-3t-7Zg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="57" id="Tub-ve-vBb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GHo-bl-OkR" secondAttribute="bottom" constant="20" id="UTZ-RA-c2n"/>
+                            <constraint firstItem="Cmx-Gv-dzF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-6.5" id="Uxp-Hb-YhR"/>
+                            <constraint firstItem="Cmx-Gv-dzF" firstAttribute="top" secondItem="buQ-3t-7Zg" secondAttribute="bottom" constant="-458" id="bCD-f9-mRI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="buQ-3t-7Zg" secondAttribute="bottom" constant="64" id="ePk-e0-hQY"/>
+                            <constraint firstItem="GHo-bl-OkR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="kgu-4r-FSG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="B7i-Pc-A2k" id="a9X-Oj-7RN"/>
+                        <outlet property="imageView" destination="buQ-3t-7Zg" id="fxR-6x-tVt"/>
+                        <outlet property="progressView" destination="Cmx-Gv-dzF" id="zEP-UY-M03"/>
+                        <outlet property="resumeButton" destination="GHo-bl-OkR" id="i5G-fk-TIp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="199"/>
+        </scene>
+    </scenes>
+</document>
